@@ -67,7 +67,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont}
 static const char *termcmd[]  = { "st", NULL };
 static const char *firefox[] = { "firefox", NULL };
 static const char *thunar[] = { "thunar", NULL};
-
+static const char "slstatus[] = { "slstatus", NULL};
 static Key keys[] = {
         /* modifier                     key        function        argument */
         { MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
@@ -88,6 +88,7 @@ static Key keys[] = {
         { MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
         { MODKEY,                       XK_w,      spawn,          {.v = firefox } },
         { MODKEY,                       XK_e,      spawn,          {.v = thunar } },
+	{ MODKEY,			XK_m,	   spawn,	   {.v = slstatus } },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
